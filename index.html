@@ -1,0 +1,97 @@
+---
+layout: default
+title: Home
+notitle: true
+
+# groups of columns of {roles: list, width: num, image: bool}
+role-tables:
+- - roles: [faculty, postdoc, staff]
+    width: 4
+    image: true
+  - roles: [grad]
+    width: 8
+    image: true
+- - roles: [masters, collab]
+    width: 4
+    image: true
+  - roles: [ugrad]
+    width: 8
+    image: true
+---
+
+<div class="jumbotron">
+    <p>
+      <b>John AI Lab</b> is xxx.
+      Our group is based in
+      <a href="https://www.comp.nus.edu.sg/">School of Computing</a>,
+      at the <a href="https://nus.edu.sg/">National University of Singapore</a>.
+    </p>
+</div>
+
+
+<section>
+    <h2>News</h2>
+    <ul class="news list-unstyled">
+        {% for post in site.posts limit: site.front_page_news %}
+            {% include news-item.html item=post %}
+        {% endfor %}
+    </ul>
+    {% assign numposts = site.posts | size %}
+    {% if numposts >= 1 %}
+        <p>
+            <span class="fa fa-fw fa-history"></span>
+            <a href="{{ site.base }}/blog.html">Older posts&hellip;</a>
+        </p>
+    {% endif %}
+</section>
+
+<section>
+    <div id="research">
+        <h2>Research</h2>
+        <div class="card-columns">
+            {% comment %}
+            Sort the projects by date, putting those without dates last
+            {% endcomment %}
+            {% assign projects_by_date = site.projects | sort: 'last-updated', 'first' %}
+            {% assign projects_by_date = projects_by_date | reverse %}
+            {% for p in projects_by_date %}
+                {% if p.status != "inactive" %}
+                    {% include project-card.html project=p %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Mission</h2>
+    Feel the AGI.
+
+</section>
+
+<div id="people">
+    <h2>People</h2>
+    {% for role-table in page.role-tables %}
+        <section class="people row justify-content-between">
+            {% for role-column in role-table %}
+                <div class="col-md-{{ role-column.width }}">
+                    {% for role in role-column.roles %}
+                        {% include role-people.html role=role image=role-column.image %}
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </section>
+    {% endfor %}
+</div>
+
+<section>
+    <div id="publications">
+        <h2>Publications</h2>
+        <p>
+            <a href="{{ site.base }}/bib/pubs.bib">Download BibTeX.</a>
+        </p>
+
+        {% include pubs.html %}
+        </div>
+    </div>
+</section>
