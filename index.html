@@ -19,13 +19,20 @@ role-tables:
     image: true
 ---
 
-<div class="jumbotron">
-    <p>
-      <b>John AI Lab</b> is xxx.
-      Our group is based in
-      <a href="https://www.comp.nus.edu.sg/">School of Computing</a>,
-      at the <a href="https://nus.edu.sg/">National University of Singapore</a>.
-    </p>
+<!-- Hero Section -->
+<div class="container-fluid bg-light py-5 mb-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <h1 class="display-4 mb-4">John AI Lab</h1>
+        <p class="lead">
+          Welcome to the John AI Lab at the 
+          <a href="https://www.comp.nus.edu.sg/">School of Computing</a>,
+          <a href="https://nus.edu.sg/">National University of Singapore</a>.
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
 
 
@@ -45,29 +52,32 @@ role-tables:
     {% endif %}
 </section>
 
-<section>
-    <div id="research">
-        <h2>Research</h2>
-        <div class="card-columns">
-            {% comment %}
-            Sort the projects by date, putting those without dates last
-            {% endcomment %}
-            {% assign projects_by_date = site.projects | sort: 'last-updated', 'first' %}
-            {% assign projects_by_date = projects_by_date | reverse %}
-            {% for p in projects_by_date %}
-                {% if p.status != "inactive" %}
-                    {% include project-card.html project=p %}
-                {% endif %}
-            {% endfor %}
+<!-- Research Section -->
+<div class="container mb-5">
+  <h2 class="border-bottom pb-2">Research</h2>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {% assign projects_by_date = site.projects | sort: 'last-updated', 'first' | reverse %}
+    {% for p in projects_by_date %}
+      {% if p.status != "inactive" %}
+        <div class="col">
+          {% include project-card.html project=p %}
         </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Mission Section -->
+<div class="container mb-5">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="border-bottom pb-2">Mission</h2>
+      <div class="p-4 bg-light rounded">
+        <p class="lead mb-0">Feel the AGI.</p>
+      </div>
     </div>
-</section>
-
-<section>
-    <h2>Mission</h2>
-    Feel the AGI.
-
-</section>
+  </div>
+</div>
 
 <div id="people">
     <h2>People</h2>
