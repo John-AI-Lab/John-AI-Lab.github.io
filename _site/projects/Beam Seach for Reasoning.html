@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>John-AI-Lab: Project-Example-1</title>
+        <title>John-AI-Lab: Beam Search for Reasoning</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet"
@@ -95,52 +95,33 @@
             
 
             
-                <h1>Project-Example-1</h1>
+                <h1>Beam Search for Reasoning</h1>
             
 
-            <p><a href="https://travis-ci.org/dmlc/xgboost"><img src="https://travis-ci.org/dmlc/xgboost.svg?branch=master" alt="Build Status" /></a>
-<a href="https://xgboost.readthedocs.org"><img src="https://readthedocs.org/projects/xgboost/badge/?version=latest" alt="Documentation Status" /></a>
-<a href="./LICENSE"><img src="http://dmlc.github.io/img/apache2.svg" alt="GitHub license" /></a></p>
+            <p>We introduce a stepwise self-evaluation mechanism to enhance the reasoning capabilities of Large Language Models (LLMs). Our approach integrates self-evaluation guidance via stochastic beam search, serving as a calibrated criterion that facilitates efficient reasoning and superior prediction quality. By balancing exploitation and exploration with temperature-controlled randomness, our method excels in producing high-quality single-chain generations and adapts well to multiple-chain scenarios with high diversity. Our approach surpasses Codex-backboned baselines in few-shot accuracy by 6.34%, 9.56%, and 5.46% on the GSM8K, AQuA, and StrategyQA benchmarks, respectively. Further analysis in multi-step reasoning indicates that our self-evaluation guidance effectively identifies logical failures, leading to higher consistency and robustness.</p>
 
-<p>XGBoost is an optimized distributed gradient boosting system designed to be highly <strong>efficient</strong>, <strong>flexible</strong> and <strong>portable</strong>.
-It implements machine learning algorithms under the Gradient Boosting framework. XGBoost provides a parallel tree boosting(also known as GBDT, GBM) that solve many data science problems in a fast and accurate way. The same code runs on major distributed environment(Hadoop, SGE, MPI) and can solve problems beyond billions of examples.
-The most recent version integrates naturally with DataFlow frameworks(e.g. Flink and Spark).</p>
+<p><strong>Paper</strong>: <a href="https://arxiv.org/abs/2305.00633">arXiv:2305.00633</a><br />
+<strong>Code</strong>: <a href="https://github.com/guideddecoding">GitHub Repository</a></p>
 
-<h2 id="reference-paper">Reference Paper</h2>
+<h2 id="generated-examples">Generated Examples</h2>
 
-<ul>
-  <li>Tianqi Chen and Carlos Guestrin. <a href="data/pdf/XGBoostArxiv.pdf">XGBoost: A Scalable Tree Boosting System</a>. Preprint Arxiv.1603.02754</li>
-</ul>
+<p>We compare the predictions of baseline methods and our approach on specific instances. Scores from low to high are visualized from orange, yellow, to green. Here, <em>C</em>, <em>P</em>, and <em>E</em> represent the evaluation confidence, generation confidence (probability), and their combination as the final self-evaluation score, respectively.</p>
 
-<h2 id="technical-highlights">Technical Highlights</h2>
+<p>In general, the evaluation confidence <em>C</em> is more effective at identifying logical errors, considering accumulated mistakes from prior steps, while the generation probability <em>P</em> focuses more on text perplexity as the confidence of the LLM generator.</p>
 
-<ul>
-  <li>Sparse aware tree learning to optimize for sparse data.</li>
-  <li>Distributed weighted quantile sketch for quantile findings and approximate tree learning.</li>
-  <li>Cache aware learning algorithm</li>
-  <li>Out of core computation system for training when</li>
-</ul>
+<p style="text-align: center"><img src="/img/beamsearchreasoning/beamsearchreasoning.jpg" alt="image" width="80%" /></p>
 
-<h2 id="impact">Impact</h2>
+<h2 id="citation">Citation</h2>
 
-<ul>
-  <li>XGBoost is one of the most frequently used package to <strong>win machine learning challenges</strong>.</li>
-  <li>XGBoost can solve <strong>billion scale problems with few resources</strong> and is widely adopted in industry.</li>
-  <li>See <a href="https://github.com/dmlc/xgboost/tree/master/demo/README.md">XGBoost Resources Page</a> for a complete list of usecases of XGBoost,
-including machine learning challenge winning solutions, data science tutorials and industry adoptions.</li>
-</ul>
-
-<h2 id="acknowledgement">Acknowledgement</h2>
-
-<p>XGBoost open source project is actively developed by amazing contributors from <a href="https://github.com/dmlc/xgboost/blob/master/CONTRIBUTORS.md">DMLC/XGBoost community</a>.</p>
-
-<h2 id="resources">Resources</h2>
-<ul>
-  <li><a href="https://xgboost.readthedocs.org/en/latest/model.html">Tutorial on Tree Boosting</a> [<a href="http://homes.cs.washington.edu/~tqchen/data/pdf/BoostedTree.pdf">Slides</a>]</li>
-  <li><a href="https://github.com/dmlc/xgboost">XGBoost Main Project Repo</a> for python, R, java, scala and distributed version.</li>
-  <li><a href="https://github.com/dmlc/XGBoost.jl">XGBoost Julia Package</a></li>
-  <li><a href="https://github.com/dmlc/xgboost/tree/master/demo/README.md">XGBoost Resources</a> for all resources including challenge winning solutions, tutorials.</li>
-</ul>
+<div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@misc</span><span class="p">{</span><span class="nl">xie2023decomposition</span><span class="p">,</span>
+      <span class="na">title</span><span class="p">=</span><span class="s">{Decomposition Enhances Reasoning via Self-Evaluation Guided Decoding}</span><span class="p">,</span> 
+      <span class="na">author</span><span class="p">=</span><span class="s">{Yuxi Xie and Kenji Kawaguchi and Yiran Zhao and Xu Zhao and Min-Yen Kan and Junxian He and Qizhe Xie}</span><span class="p">,</span>
+      <span class="na">year</span><span class="p">=</span><span class="s">{2023}</span><span class="p">,</span>
+      <span class="na">eprint</span><span class="p">=</span><span class="s">{2305.00633}</span><span class="p">,</span>
+      <span class="na">archivePrefix</span><span class="p">=</span><span class="s">{arXiv}</span><span class="p">,</span>
+      <span class="na">primaryClass</span><span class="p">=</span><span class="s">{cs.CL}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 
 <!-- skip people for now
