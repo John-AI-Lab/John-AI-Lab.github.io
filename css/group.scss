@@ -4,7 +4,10 @@
 $gray: #999;
 $light-gray: #EEE;
 
-/* CMU color scheme. */
+
+html {
+    scroll-behavior: smooth;
+  }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;
