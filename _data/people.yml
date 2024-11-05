@@ -29,7 +29,7 @@ guanzhengchen:
     webpage: "https://guanzhchen.github.io/"
     github: guanzhchen
     role: grad
-    image: False
+    image: /img/people/guanzheng.jpg
 
 keyuduan:
     display_name: "Keyu Duan"

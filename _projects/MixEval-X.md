@@ -8,38 +8,29 @@ layout: project
 last-updated: 2024-10-20
 ---
 
-[![Build Status](https://travis-ci.org/dmlc/xgboost.svg?branch=master)](https://travis-ci.org/dmlc/xgboost)
-[![Documentation Status](https://readthedocs.org/projects/xgboost/badge/?version=latest)](https://xgboost.readthedocs.org)
-[![GitHub license](http://dmlc.github.io/img/apache2.svg)](./LICENSE)
+Perceiving and generating diverse modalities are crucial for AI models to effectively learn from and engage with real-world signals, necessitating reliable evaluations for their development. We identify two major issues in current evalua- tions: (1) inconsistent standards, shaped by different communities with varying protocols and maturity levels; and (2) significant query, grading, and generalization biases. To address these, we introduce MixEval-X, the first any-to-any, real-world benchmark designed to optimize and standardize evaluations across diverse input and output modalities. We propose multi-modal benchmark mixture and adaptation-rectification pipelines to reconstruct real-world task distributions, ensuring evaluations generalize effectively to real-world use cases. Extensive meta-evaluations show our approach effectively aligns benchmark samples with real-world task distributions. Meanwhile, MixEval-X’s model rankings correlate strongly with that of crowd-sourced real-world evaluations (up to 0.98) while being much more efficient. We provide comprehensive leaderboards to rerank existing models and organizations and offer insights to enhance understanding of multi-modal evaluations and inform future research.
 
-XGBoost is an optimized distributed gradient boosting system designed to be highly **efficient**, **flexible** and **portable**.
-It implements machine learning algorithms under the Gradient Boosting framework. XGBoost provides a parallel tree boosting(also known as GBDT, GBM) that solve many data science problems in a fast and accurate way. The same code runs on major distributed environment(Hadoop, SGE, MPI) and can solve problems beyond billions of examples.
-The most recent version integrates naturally with DataFlow frameworks(e.g. Flink and Spark).
+{:center: style="text-align: center"}
+![image](/img/mixeval-x/mixeval-x.png){: width="70%"}
+{:center}
 
-## Reference Paper
+## Key Features
 
-- Tianqi Chen and Carlos Guestrin. [XGBoost: A Scalable Tree Boosting System](data/pdf/XGBoostArxiv.pdf). Preprint Arxiv.1603.02754
+- **Eight Modality Combinations**: Covers diverse input-output modality combinations with potential for further extension.
+- **High Correlation**: Achieves up to **0.98 correlation** with arena-like multi-modal evaluations, making it both reliable and efficient.
+- **Pipeline**: Includes a **multi-modal benchmark mixture** and **adaptation-rectification processes** to ensure tasks reflect real-world use cases.
+- **Unified Standards**: Aims to provide unified, high standards across modalities and communities, keeping pace with state-of-the-art developments.
 
-## Technical Highlights
+## Advantages
 
-- Sparse aware tree learning to optimize for sparse data.
-- Distributed weighted quantile sketch for quantile findings and approximate tree learning.
-- Cache aware learning algorithm
-- Out of core computation system for training when
+Using MixEval-X offers several benefits:
 
-## Impact
+- **Comprehensive and Unbiased**: Provides a well-rounded query distribution with minimized biases.
+- **Fair Grading**: Ensures fair assessment, with some exceptions for open-ended tasks.
+- **Dynamic and Challenging**: Adjusts to different scenarios, making it suitable for robust testing.
+- **Accurate Ranking**: Provides precise model rankings.
+- **Fast, Cost-effective, and Reproducible**: Enables efficient testing without sacrificing quality.
 
-- XGBoost is one of the most frequently used package to **win machine learning challenges**.
-- XGBoost can solve **billion scale problems with few resources** and is widely adopted in industry.
-- See [XGBoost Resources Page](https://github.com/dmlc/xgboost/tree/master/demo/README.md) for a complete list of usecases of XGBoost,
-  including machine learning challenge winning solutions, data science tutorials and industry adoptions.
+## Additional Resources
 
-## Acknowledgement
-
-XGBoost open source project is actively developed by amazing contributors from [DMLC/XGBoost community](https://github.com/dmlc/xgboost/blob/master/CONTRIBUTORS.md).
-
-## Resources
-- [Tutorial on Tree Boosting](https://xgboost.readthedocs.org/en/latest/model.html) [[Slides](http://homes.cs.washington.edu/~tqchen/data/pdf/BoostedTree.pdf)]
-- [XGBoost Main Project Repo](https://github.com/dmlc/xgboost) for python, R, java, scala and distributed version.
-- [XGBoost Julia Package](https://github.com/dmlc/XGBoost.jl)
-- [XGBoost Resources](https://github.com/dmlc/xgboost/tree/master/demo/README.md) for all resources including challenge winning solutions, tutorials.
+For **detailed statistics** and the latest **leaderboards**, please visit the [MixEval-X website](https://mixeval-x.github.io/).
