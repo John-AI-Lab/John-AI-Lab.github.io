@@ -20,17 +20,15 @@ role-tables:
 ---
 
 <!-- Hero Section -->
-<div class="container-fluid bg-light py-5 mb-5">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-8">
-        <h1 class="display-4 mb-4">John AI Lab</h1>
-        <p class="lead">
-          Welcome to the John AI Lab at the 
-          <a href="https://www.comp.nus.edu.sg/">School of Computing</a>,
-          <a href="https://nus.edu.sg/">National University of Singapore</a>.
-        </p>
-      </div>
+<div id="home" class="container-fluid bg-light py-5 mb-5">
+  <div class="row align-items-center">
+    <div class="col-12 px-5">
+      <h1 class="display-4 mb-4">John AI Lab</h1>
+      <p class="lead">
+        Welcome to the John AI Lab at the
+        <a href="https://www.comp.nus.edu.sg/">School of Computing</a>,
+        <a href="https://nus.edu.sg/">National University of Singapore</a>.
+      </p>
     </div>
   </div>
 </div>
@@ -54,19 +52,22 @@ role-tables:
 </div>
 
 <!-- Research Section -->
-<div id="research" class="container mb-5">
-  <h2 class="border-bottom pb-2">Research</h2>
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-    {% assign projects_by_date = site.projects | sort: 'last-updated', 'first' | reverse %}
-    {% for p in projects_by_date %}
-      {% if p.status != "inactive" %}
-        <div class="col">
-          {% include project-card.html project=p %}
-        </div>
-      {% endif %}
-    {% endfor %}
+<section id="research">
+  <h2>Research</h2>
+  <div class="row d-flex align-items-stretch">
+      {% comment %}
+      Sort the projects by date, putting those without dates last
+      {% endcomment %}
+      {% assign projects_by_date = site.projects | sort: 'last-updated', 'first' | reverse %}
+      {% for p in projects_by_date %}
+          {% if p.status != "inactive" %}
+              <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+                  {% include project-card.html project=p %}
+              </div>
+          {% endif %}
+      {% endfor %}
   </div>
-</div>
+</section>
 
 <!-- Mission Section -->
 <div class="container mb-5">
