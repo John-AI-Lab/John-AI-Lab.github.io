@@ -76,6 +76,12 @@ fengtaohe:
     display_name: "Fengtao He"
     webpage: False
     role: masters
+    image: /img/people/fengtao.png
+
+leonlin:
+    display_name: "Leon Lin"
+    webpage: False
+    role: masters
     image: False
 
 
