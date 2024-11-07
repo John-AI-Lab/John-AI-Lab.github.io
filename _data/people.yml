@@ -24,6 +24,13 @@ jinjieni:
 # Grads
 # Alphabetical order last name
 
+hannahbrown:
+    display_name: "Hannah Brown"
+    webpage: "https://hannah-aught.github.io/"
+    role: grad
+    image: /img/people/hbrown.png
+    bio: "Co-advised with Prof. Kenji Kawaguchi"
+
 guanzhengchen:
     display_name: "Guanzheng Chen"
     webpage: "https://guanzhchen.github.io/"
@@ -37,9 +44,16 @@ keyuduan:
     role: grad
     image: False
 
+ethergan:
+    display_name: "Ether Gan"
+    webpage: False
+    role: grad
+    image: False
+    bio: "Co-advised with Prof. Min-Yen Kan"
+
 xiangyanliu:
     display_name: "Xiangyan Liu"
-    webpage: False
+    webpage: "https://scholar.google.com/citations?user=lsFTg-0AAAAJ&hl=en"
     role: grad
     image: False
 
@@ -53,7 +67,8 @@ yiranzhao:
     display_name: "Yiran Zhao"
     webpage: "https://zhaoyiran924.github.io/"
     role: grad
-    image: False
+    image: /img/people/yiran.png
+    bio: "Affiliated Member"
 
 # Masters
 
@@ -86,11 +101,24 @@ znshen2:
 # Undergrads
 # Alphabetical order
 
+qlfeng:
+    display_name: "Qilong Feng"
+    webpage: False
+    role: ugrad
+    image: False
+
 znshen:
     display_name: "Zhennan Shen"
     webpage: False
     role: ugrad
     image: False
+
+yzhang:
+    display_name: "Yang Zhang"
+    webpage: False
+    role: ugrad
+    image: False
+
 
 # Undergrad Alums
 # Alphabetical order
