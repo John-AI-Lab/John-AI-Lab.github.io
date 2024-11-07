@@ -84,17 +84,17 @@ role-tables:
 <!-- People Section -->
 <div id="people" class="container mb-5">
   <h2 class="border-bottom pb-2">People</h2>
-    {% for role-table in page.role-tables %}
-        <section class="people row justify-content-between">
-            {% for role-column in role-table %}
-                <div class="col-md-{{ role-column.width }}">
-                    {% for role in role-column.roles %}
-                        {% include role-people.html role=role image=role-column.image %}
-                    {% endfor %}
-                </div>
-            {% endfor %}
-        </section>
-    {% endfor %}
+  {% for role-table in page.role-tables %}
+    <div class="row d-flex flex-wrap"> <!-- Added flex utility classes -->
+      {% for role-column in role-table %}
+        <div class="col-md-{{ role-column.width }}">
+          {% for role in role-column.roles %}
+            {% include role-people.html role=role image=role-column.image %}
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
 </div>
 
 <!-- Publications Section -->

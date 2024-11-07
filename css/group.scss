@@ -98,7 +98,7 @@ ul.news {
 }
 
 @media (min-width: 768px) {
-    .role.grad      { column-count: 2 }
+    // .role.grad      { column-count: 2 }
     .project-people { column-count: 3 }
     .card-columns   { column-count: 3 }
 }
@@ -138,7 +138,7 @@ section {
 
 .person {
 
-    margin-bottom: 25px;
+    margin-bottom: 25px !important;
 
     .profile {
         height: 85px;

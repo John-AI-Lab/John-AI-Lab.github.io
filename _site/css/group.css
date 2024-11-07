@@ -84,9 +84,6 @@ ul.news > li {
   }
 }
 @media (min-width: 768px) {
-  .role.grad {
-    column-count: 2;
-  }
   .project-people {
     column-count: 3;
   }
@@ -124,7 +121,7 @@ section {
 }
 
 .person {
-  margin-bottom: 25px;
+  margin-bottom: 25px !important;
 }
 .person .profile {
   height: 85px;
