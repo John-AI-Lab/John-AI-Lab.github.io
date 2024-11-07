@@ -29,7 +29,7 @@ hannahbrown:
     webpage: "https://hannah-aught.github.io/"
     role: grad
     image: /img/people/hannah.png
-    bio: "Co-advised with Prof. Kenji Kawaguchi"
+    bio: "Co-advised with Kenji Kawaguchi"
 
 guanzhengchen:
     display_name: "Guanzheng Chen"
@@ -49,7 +49,7 @@ esthergan:
     webpage: False
     role: grad
     image: False
-    bio: "Co-advised with Prof. Min-Yen Kan"
+    bio: "Co-advised with Min-Yen Kan"
 
 xiangyanliu:
     display_name: "Xiangyan Liu"
