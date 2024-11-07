@@ -77,14 +77,14 @@ fengtaohe:
     webpage: False
     role: masters
     image: /img/people/fengtao.png
-    bio: "M.S. from National University of Singapore"
+    bio: "National University of Singapore"
 
 leonlin:
     display_name: "Leon Lin"
     webpage: False
     role: masters
     image: False
-    bio: "M.S. from National University of Singapore"
+    bio: "National University of Singapore"
 
 
 # Alums
@@ -104,7 +104,7 @@ znshen2:
     webpage: False
     role: alum
     image: False
-    bio: "B.S from SJTU, now at University of xxx"
+    bio: "SJTU, now at University of xxx"
 
 # Undergrads
 # Alphabetical order
@@ -114,21 +114,21 @@ qlfeng:
     webpage: False
     role: ugrad
     image: False
-    bio: "B.S. from National University of Singapore"
+    bio: "National University of Singapore"
 
 znshen:
     display_name: "Zhennan Shen"
     webpage: False
     role: ugrad
     image: False
-    bio: "B.S. from Shanghai Jiao Tong University"
+    bio: "Shanghai Jiao Tong University"
 
 yzhang:
     display_name: "Yang Zhang"
     webpage: False
     role: ugrad
     image: False
-    bio: "B.S. from Peking University"
+    bio: "Peking University"
 
 
 # Undergrad Alums
