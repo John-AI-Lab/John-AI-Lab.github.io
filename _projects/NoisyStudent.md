@@ -2,7 +2,7 @@
 title: Noisy Student
 
 description: |
-  A semi-supervised learning method which achieves 88.4% top-1 accuracy on ImageNet
+  A semi-supervised learning method which achieves 88.4% top-1 accuracy on ImageNet.
 
 layout: project
 last-updated: 2019-11-11

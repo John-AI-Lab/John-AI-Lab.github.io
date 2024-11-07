@@ -2,7 +2,7 @@
 title: Beam Search for Reasoning
 
 description: |
-  A framework of stepwise LLM reasoning
+  A framework of stepwise LLM reasoning.
 
 layout: project
 last-updated: 2023-05-01

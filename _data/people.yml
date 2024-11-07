@@ -77,12 +77,14 @@ fengtaohe:
     webpage: False
     role: masters
     image: /img/people/fengtao.png
+    bio: "M.S. from National University of Singapore"
 
 leonlin:
     display_name: "Leon Lin"
     webpage: False
     role: masters
     image: False
+    bio: "M.S. from National University of Singapore"
 
 
 # Alums
@@ -112,18 +114,21 @@ qlfeng:
     webpage: False
     role: ugrad
     image: False
+    bio: "B.S. from National University of Singapore"
 
 znshen:
     display_name: "Zhennan Shen"
     webpage: False
     role: ugrad
     image: False
+    bio: "B.S. from Shanghai Jiao Tong University"
 
 yzhang:
     display_name: "Yang Zhang"
     webpage: False
     role: ugrad
     image: False
+    bio: "B.S. from Peking University"
 
 
 # Undergrad Alums

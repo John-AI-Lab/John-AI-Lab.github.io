@@ -2,7 +2,7 @@
 title: RACE Dataset
 
 description: |
-  Large-scale reading comprehension dataset designed to evaluate machine understanding of text
+  Large-scale reading comprehension dataset designed to evaluate machine understanding of text.
 
 layout: project
 last-updated: 2017-04-15

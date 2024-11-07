@@ -2,7 +2,7 @@
 title: MixEval-X
 
 description: |
-  Any-to-Any Evaluations from Real-World Data Mixtures
+  Any-to-Any Evaluations from Real-World Data Mixtures.
 
 layout: project
 last-updated: 2024-10-20
