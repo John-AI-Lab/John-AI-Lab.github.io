@@ -44,8 +44,8 @@ keyuduan:
     role: grad
     image: False
 
-ethergan:
-    display_name: "Ether Gan"
+esthergan:
+    display_name: "Esther Gan"
     webpage: False
     role: grad
     image: False
