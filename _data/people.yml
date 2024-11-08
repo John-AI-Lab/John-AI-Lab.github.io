@@ -51,6 +51,13 @@ esthergan:
     image: False
     bio: "Co-advised with Min-Yen Kan"
 
+ziyaoguo:
+    display_name: "Ziyao Guo"
+    webpage: "https://scholar.google.com/citations?user=FlZSxJMAAAAJ&hl=en"
+    role: grad
+    image: /img/people/ziyao.png
+    bio: "Affiliated Member"
+
 xiangyanliu:
     display_name: "Xiangyan Liu"
     webpage: "https://scholar.google.com/citations?user=lsFTg-0AAAAJ&hl=en"
