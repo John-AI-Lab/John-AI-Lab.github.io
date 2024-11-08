@@ -30,8 +30,12 @@ body {
   text-align: center;
   font-size: 0.8em;
 }
+.footer p {
+  margin: 5px 0; /* Even smaller gap */
+}
 .footer a:link, .footer a:visited {
   color: #999;
+  text-decoration: underline;
 }
 
 #topbar {

@@ -38,8 +38,13 @@ body {
     text-align: center;
     font-size: 0.8em;
 
+    p {
+        margin: 5px 0;  /* Even smaller gap */
+    }
+
     a:link, a:visited {
         color: $gray;
+        text-decoration: underline;
     }
 }
 
