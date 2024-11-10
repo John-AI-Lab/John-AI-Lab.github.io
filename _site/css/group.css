@@ -11,6 +11,24 @@ body {
   background-color: #800020;
 }
 
+.nav-pills {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.nav-pills .nav-link {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+}
+@media (min-width: 768px) {
+  .nav-pills .nav-link {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}
+
 a {
   color: #800020;
 }

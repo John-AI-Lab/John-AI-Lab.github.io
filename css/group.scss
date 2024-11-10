@@ -18,6 +18,25 @@ body {
     background-color: #800020;
 }
 
+// Navigation styles
+.nav-pills {
+    display: flex;
+    flex-wrap: nowrap;  // Prevent wrapping on mobile
+    white-space: nowrap;  // Keep text in one line
+    overflow-x: auto;  // Allow horizontal scrolling if needed
+    -webkit-overflow-scrolling: touch;  // Smooth scrolling on iOS
+    
+    .nav-link {
+        padding: 0.5rem 0.75rem;  // Reduce padding for mobile
+        font-size: 0.9rem;  // Slightly smaller font on mobile
+        
+        @media (min-width: 768px) {
+            padding: 0.5rem 1rem;  // Normal padding on desktop
+            font-size: 1rem;  // Normal font size on desktop
+        }
+    }
+}
+
 a {
     color: #800020;
 }
