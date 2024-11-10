@@ -12,41 +12,49 @@ body {
     padding-top: 20px;
 }
 
-// Navigation styles from previous version
+// Navigation styles
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;
     background-color: #800020;
-}
-
-// Navigation styles
-.nav-pills {
-    display: flex;
-    flex-wrap: nowrap;  // Prevent wrapping on mobile
-    white-space: nowrap;  // Keep text in one line
-    overflow-x: auto;  // Allow horizontal scrolling if needed
-    -webkit-overflow-scrolling: touch;  // Smooth scrolling on iOS
-    
-    .nav-link {
-        padding: 0.5rem 0.75rem;  // Reduce padding for mobile
-        font-size: 0.9rem;  // Slightly smaller font on mobile
-        
-        @media (min-width: 768px) {
-            padding: 0.5rem 1rem;  // Normal padding on desktop
-            font-size: 1rem;  // Normal font size on desktop
-        }
-    }
 }
 
 a {
     color: #800020;
 }
 
+.header {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#topbar {
+    padding-top: 10px;
+    padding-bottom: 20px;  // Add this line for the gap
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Group logo */
+#logo {
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+
+// Separator line
+.separator {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid $light-gray;
+    margin-bottom: 2rem;
+}
+
 // Hero section styles
 .hero-section {
-    height: 50vh;       // Controls vertical span - adjust this value to crop more/less
+    height: 50vh;
     max-width: 1200px;
     margin: 2rem auto;
-    background: url('../img/hero-bg.jpg') no-repeat center 5%;  // The 40% controls which part of the image is shown
+    background: url('../img/hero-bg.jpg') no-repeat center 5%;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -72,50 +80,15 @@ a {
     }
 }
 
-.header {
-    width: 100%;
-    background-color: white;  // Ensure background covers the line
-}
-
 .footer {
     color: $gray;
     border-top: 1px solid $light-gray;
     text-align: center;
     font-size: 0.8em;
-
-    p {
-        margin: 5px 0;
-    }
-
+    
     a:link, a:visited {
         color: $gray;
-        text-decoration: underline;
     }
-}
-
-#topbar {
-    padding: 15px 0;
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;  // Space between logo and nav items
-}
-
-// Separator line
-.separator-container {
-    width: 100%;
-    padding-top: 0px;  // Match the height of topbar to prevent overlap
-}
-
-.separator {
-    max-width: 1200px;
-    margin: 0 auto;
-    border-bottom: 1px solid $light-gray;
-    margin-top: 0;      // Remove top margin
-    margin-bottom: 2rem;
-    clear: both;        // Ensure it clears any floated elements
 }
 
 .fa {
@@ -133,18 +106,13 @@ a > .fa {
     font-size: 125%
 }
 
-#logo {
-    height: 100px;  // Adjust based on your logo size
-    width: auto;
-    margin: 0;     // Remove any margin that might cause overlap
-}
-
+/* Front page news. */
 ul.news {
     .date {
         color: $gray;
         font-weight: bold;
     }
-
+    
     > li {
         margin-top: 2em;
     }
@@ -188,22 +156,22 @@ section {
         width: 40px;
         margin: 3px;
     }
-
+    
     .card-footer { padding: 0.5em }
 }
 
 .person {
     margin-bottom: 25px !important;
-
+    
     .profile {
         height: 85px;
         width: 85px;
     }
-
+    
     .bio {
         color: $gray;
     }
-
+    
     .person-name {
         margin: 0;
     }
@@ -211,7 +179,7 @@ section {
 
 .person-without-image {
     margin: 0;
-
+    
     .bio {
         margin-left: 1em;
     }
@@ -219,4 +187,9 @@ section {
 
 svg {
     vertical-align: middle;
+}
+
+// Mission section spacing
+.lead.mb-3 {
+    margin-bottom: 1rem !important;
 }
