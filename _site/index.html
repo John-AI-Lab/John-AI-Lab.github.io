@@ -15,108 +15,106 @@
         <link rel="icon" href="/img/logo/icon.svg" type="image/x-icon">
     </head>
     <body>
-        <div class="container">
-            <!-- This is a bit nasty, but it basically says be a column first, and on larger screens be a spaced out row -->
-            <div class="header d-flex
-                        flex-column
-                        flex-md-row justify-content-md-between">
-                <a href="/" class="">
-                  <img src="/img/logo/nus.svg" height="90px"
-                       alt="JohnAILab" id="logo">
+        <!-- Navigation bar - outside container for full width -->
+        <nav class="top-navbar">
+            <div class="container d-flex justify-content-between align-items-center">
+                <a href="/" class="navbar-brand">
+                    <img src="/img/logo/nus.svg" height="60px"
+                         alt="JohnAILab" id="logo">
                 </a>
-                <ul id="topbar" class="nav nav-pills justify-content-center">
-
+                <ul class="nav nav-pills">
                     
                     
-
-                        
-
                         
                         
                         
-
+                        
                         <li class="nav-item">
                             <a class="nav-link active"
                                href="/">
                                 Home
                             </a>
                         </li>
-
                     
-
-                        
-
                         
                         
                         
-
+                        
                         <li class="nav-item">
                             <a class="nav-link "
                                href="/#people">
                                 People
                             </a>
                         </li>
-
                     
-
-                        
-
                         
                         
                         
-
+                        
                         <li class="nav-item">
                             <a class="nav-link "
                                href="/#research">
                                 Research
                             </a>
                         </li>
-
                     
-
-                        
-
                         
                         
                         
-
+                        
                         <li class="nav-item">
                             <a class="nav-link "
                                href="/#publications">
                                 Publications
                             </a>
                         </li>
-
                     
-
                 </ul>
             </div>
+        </nav>
 
-            
-
-            
-
-            <!-- Hero Section -->
-<div id="home" class="container-fluid bg-light py-5 mb-5">
-  <div class="row align-items-center">
-    <div class="col-12 px-5">
-      <h1 class="display-4 mb-4">John AI Lab</h1>
-      <p class="lead">
-        Welcome to the John AI Lab at the
-        <a href="https://www.comp.nus.edu.sg/">School of Computing</a>,
-        <a href="https://nus.edu.sg/">National University of Singapore</a>.
-      </p>
+        <!-- Main content -->
+        <!-- Hero Section -->
+<div class="hero-section">
+    <div class="hero-content">
+        <h1>John AI Lab @ NUS</h1>
     </div>
-  </div>
 </div>
 
+<!-- Main Content -->
+<div class="container">
 
-<!-- News Section -->
-<div class="container mb-5">
-  <h2 class="border-bottom pb-2">News</h2>
-  <ul class="news list-unstyled">
-      
-          
+    <!-- Mission Section - New Design -->
+    <div class="container">
+      <div class="mission-section">
+          <h2 class="mission-title">Our Mission</h2>
+          <div class="mission-statement">
+              <!-- Fun Intro -->
+              <div class="mission-line">FEEL THE AGI</div>
+              <div class="mission-line">USE 10K GPUS LIKE RICH KIDS IN THE INDUSTRY</div>
+              <div class="mission-line">GET 100K CITATIONS</div>
+              <div class="mission-line">GET NOBEL PRIZES AND TURING AWARDS</div>
+              
+              <!-- Main Mission Statement -->
+              <div class="mission-line highlight just-kidding mt-5">JUST KIDDING!</div>
+              <div class="mission-line mt-2">WE ARE A RESEARCH LAB AT THE</div>
+              <div class="mission-line highlight">
+                  <span class="underline"><a href="https://www.comp.nus.edu.sg/">SCHOOL OF COMPUTING</a></span>, 
+                  <span class="underline"><a href="https://nus.edu.sg/">NATIONAL UNIVERSITY OF SINGAPORE</a></span>
+              </div>
+              <div class="mission-line">WORKING ON DEMOCRATIZING AI WITH FOCUS ON</div>
+              <div class="mission-line highlight">RESOURCE-EFFICIENT AI, VISION LANGUAGE MODELS</div>
+              <div class="mission-line">AND MORE EXPLORATORY TOPICS</div>
+          </div>
+      </div>
+  </div>
+
+    <!-- News Section -->
+    <div class="mb-5">
+        <h2 class="border-bottom pb-2">News</h2>
+        <ul class="news list-unstyled">
+            
+                
 
 
 
@@ -141,8 +139,8 @@
 
     
 </li>
-      
-          
+            
+                
 
 
 
@@ -167,8 +165,8 @@
 
     
 </li>
-      
-          
+            
+                
 
 
 
@@ -193,27 +191,27 @@
 
     
 </li>
-      
-  </ul>
-  
-  
-      <p>
-          <span class="fa fa-fw fa-history"></span>
-          <a href="/blog.html">Older posts&hellip;</a>
-      </p>
-  
-</div>
+            
+        </ul>
+        
+        
+            <p>
+                <span class="fa fa-fw fa-history"></span>
+                <a href="/blog.html">Older posts&hellip;</a>
+            </p>
+        
+    </div>
 
-<!-- Research Section -->
-<div id="research" class="container mb-5">
-  <h2 class="border-bottom pb-2">Featured Research</h2>
-  <div class="row d-flex align-items-stretch">
-      
-      
-      
-          
-              <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
-                  
+    <!-- Research Section -->
+    <div id="research" class="mb-5">
+        <h2 class="border-bottom pb-2">Featured Research</h2>
+        <div class="row d-flex align-items-stretch">
+            
+            
+            
+                
+                    <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+                        
 
 
 
@@ -240,12 +238,12 @@
     
 </div>
 
-              </div>
-          
-      
-          
-              <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
-                  
+                    </div>
+                
+            
+                
+                    <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+                        
 
 
 
@@ -272,12 +270,12 @@
     
 </div>
 
-              </div>
-          
-      
-          
-              <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
-                  
+                    </div>
+                
+            
+                
+                    <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+                        
 
 
 
@@ -304,12 +302,12 @@
     
 </div>
 
-              </div>
-          
-      
-          
-              <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
-                  
+                    </div>
+                
+            
+                
+                    <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+                        
 
 
 
@@ -336,33 +334,21 @@
     
 </div>
 
-              </div>
-          
-      
-  </div>
-</div>
-
-<!-- Mission Section -->
-<div class="container mb-5">
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="border-bottom pb-2">Mission</h2>
-      <div class="p-4 bg-light rounded">
-        <p class="lead mb-0">Feel the AGI.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- People Section -->
-<div id="people" class="container mb-5">
-  <h2 class="border-bottom pb-2">People</h2>
-  
-    <div class="row d-flex flex-wrap"> <!-- Added flex utility classes -->
-      
-        <div class="col-md-4">
-          
+                    </div>
+                
             
+        </div>
+    </div>
+
+    <!-- People Section -->
+    <div id="people" class="mb-5">
+        <h2 class="border-bottom pb-2">People</h2>
+        
+            <div class="row d-flex flex-wrap">
+                
+                    <div class="col-md-4">
+                        
+                            
 
 
   
@@ -518,8 +504,8 @@
 
   
 
-          
-            
+                        
+                            
 
 
   
@@ -532,8 +518,8 @@
 
   
 
-          
-            
+                        
+                            
 
 
   
@@ -546,12 +532,12 @@
 
   
 
-          
-        </div>
-      
-        <div class="col-md-8">
-          
-            
+                        
+                    </div>
+                
+                    <div class="col-md-8">
+                        
+                            
 
 
   
@@ -986,16 +972,16 @@
 
   
 
-          
-        </div>
-      
-    </div>
-  
-    <div class="row d-flex flex-wrap"> <!-- Added flex utility classes -->
-      
-        <div class="col-md-4">
-          
-            
+                        
+                    </div>
+                
+            </div>
+        
+            <div class="row d-flex flex-wrap">
+                
+                    <div class="col-md-4">
+                        
+                            
 
 
   
@@ -1148,8 +1134,8 @@
 
   
 
-          
-            
+                        
+                            
 
 
   
@@ -1162,12 +1148,12 @@
 
   
 
-          
-        </div>
-      
-        <div class="col-md-8">
-          
-            
+                        
+                    </div>
+                
+                    <div class="col-md-8">
+                        
+                            
 
 
   
@@ -1373,23 +1359,23 @@
 
   
 
-          
-        </div>
-      
+                        
+                    </div>
+                
+            </div>
+        
     </div>
-  
-</div>
 
-<!-- Publications Section -->
-<div id="publications" class="container mb-5">
-  <h2 class="border-bottom pb-2">Publications</h2>
-  <p>
-      <a href="/bib/pubs.bib">Download BibTeX.</a>
-  </p>
-  <p class="footnote">
-      *: equal contribution, †: equal advising
-  </p>
-  <table class="table">
+    <!-- Publications Section -->
+    <div id="publications" class="mb-5">
+        <h2 class="border-bottom pb-2">Publications</h2>
+        <p>
+            <a href="/bib/pubs.bib">Download BibTeX.</a>
+        </p>
+        <p class="footnote">
+            *: equal contribution, †: equal advising
+        </p>
+        <table class="table">
     <tbody>
         <tr>
             <td>
@@ -1693,18 +1679,29 @@
     </tbody>
 </table>
 
+    </div>
 </div>
 
-
+        <!-- Footer -->
+        <div class="container">
             <div class="footer">
                 <p> Copyright 2022-2024 NUS John AI Lab </p>
                 <p class="acknowledgment">Many thanks to the <a href="https://catalyst.cs.cmu.edu" class="lab-link">Catalyst Lab</a> for inspiring our design</p>
             </div>
-
-        </div> <!-- /container -->
+        </div>
 
         <!-- Support retina images. -->
         <script type="text/javascript"
                 src="/js/srcset-polyfill.js"></script>
+        <!-- Bootstrap JS and dependencies -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+                crossorigin="anonymous"></script>
     </body>
 </html>

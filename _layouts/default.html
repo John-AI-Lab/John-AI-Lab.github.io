@@ -15,22 +15,17 @@
         <link rel="icon" href="{{ site.base }}/img/logo/icon.svg" type="image/x-icon">
     </head>
     <body>
-        <div class="container">
-            <!-- This is a bit nasty, but it basically says be a column first, and on larger screens be a spaced out row -->
-            <div class="header d-flex
-                        flex-column
-                        flex-md-row justify-content-md-between">
-                <a href="{{ site.base }}/" class="">
-                  <img src="{{ site.base }}/img/logo/nus.svg" height="90px"
-                       alt="JohnAILab" id="logo">
+        <!-- Navigation bar - outside container for full width -->
+        <nav class="top-navbar">
+            <div class="container d-flex justify-content-between align-items-center">
+                <a href="{{ site.base }}/" class="navbar-brand">
+                    <img src="{{ site.base }}/img/logo/nus.svg" height="60px"
+                         alt="JohnAILab" id="logo">
                 </a>
-                <ul id="topbar" class="nav nav-pills justify-content-center">
-
+                <ul class="nav nav-pills">
                     {% assign shorturl = page.url | replace:'.html','' | replace:'index','' %}
                     {% for item in site.navigation %}
-
                         {% assign itemshorturl = item.link | replace:'.html','' %}
-
                         {% assign maybe-active = '' %}
                         {% if item.title == 'Research' and page.layout == 'project' %}
                             {% assign maybe-active = 'active' %}
@@ -38,41 +33,40 @@
                         {% if itemshorturl == shorturl or is-research %}
                             {% assign maybe-active = 'active' %}
                         {% endif %}
-
                         <li class="nav-item">
                             <a class="nav-link {{ maybe-active }}"
                                href="{{ site.base }}{{ item.link }}">
                                 {{ item.title }}
                             </a>
                         </li>
-
                     {% endfor %}
-
                 </ul>
             </div>
+        </nav>
 
-            {% if page.image %}
-                <img src="{{ page.image }}"
-                     alt="{{ page.title }}"
-                     style="max-width: 400px"
-                     class="img-fluid mx-auto d-block mb-4"/>
-            {% endif %}
+        <!-- Main content -->
+        {{ content }}
 
-            {% if page.notitle != true %}
-                <h1>{{ page.title }}</h1>
-            {% endif %}
-
-            {{ content }}
-
+        <!-- Footer -->
+        <div class="container">
             <div class="footer">
                 <p> Copyright 2022-2024 NUS John AI Lab </p>
                 <p class="acknowledgment">Many thanks to the <a href="https://catalyst.cs.cmu.edu" class="lab-link">Catalyst Lab</a> for inspiring our design</p>
             </div>
-
-        </div> <!-- /container -->
+        </div>
 
         <!-- Support retina images. -->
         <script type="text/javascript"
                 src="{{ site.base }}/js/srcset-polyfill.js"></script>
+        <!-- Bootstrap JS and dependencies -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+                crossorigin="anonymous"></script>
     </body>
 </html>

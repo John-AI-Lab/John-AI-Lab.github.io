@@ -20,92 +20,100 @@ role-tables:
 ---
 
 <!-- Hero Section -->
-<div id="home" class="container-fluid bg-light py-5 mb-5">
-  <div class="row align-items-center">
-    <div class="col-12 px-5">
-      <h1 class="display-4 mb-4">John AI Lab</h1>
-      <p class="lead">
-        Welcome to the John AI Lab at the
-        <a href="https://www.comp.nus.edu.sg/">School of Computing</a>,
-        <a href="https://nus.edu.sg/">National University of Singapore</a>.
-      </p>
+<div class="hero-section">
+    <div class="hero-content">
+        <h1>John AI Lab @ NUS</h1>
     </div>
-  </div>
 </div>
 
+<!-- Main Content -->
+<div class="container">
 
-<!-- News Section -->
-<div class="container mb-5">
-  <h2 class="border-bottom pb-2">News</h2>
-  <ul class="news list-unstyled">
-      {% for post in site.posts limit: site.front_page_news %}
-          {% include news-item.html item=post %}
-      {% endfor %}
-  </ul>
-  {% assign numposts = site.posts | size %}
-  {% if numposts >= 1 %}
-      <p>
-          <span class="fa fa-fw fa-history"></span>
-          <a href="{{ site.base }}/blog.html">Older posts&hellip;</a>
-      </p>
-  {% endif %}
-</div>
-
-<!-- Research Section -->
-<div id="research" class="container mb-5">
-  <h2 class="border-bottom pb-2">Featured Research</h2>
-  <div class="row d-flex align-items-stretch">
-      {% comment %}
-      Sort the projects by date, putting those without dates last
-      {% endcomment %}
-      {% assign projects_by_date = site.projects | sort: 'last-updated', 'first' | reverse %}
-      {% for p in projects_by_date %}
-          {% if p.status != "inactive" %}
-              <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
-                  {% include project-card.html project=p %}
+    <!-- Mission Section - New Design -->
+    <div class="container">
+      <div class="mission-section">
+          <h2 class="mission-title">Our Mission</h2>
+          <div class="mission-statement">
+              <!-- Fun Intro -->
+              <div class="mission-line">FEEL THE AGI</div>
+              <div class="mission-line">USE 10K GPUS LIKE RICH KIDS IN THE INDUSTRY</div>
+              <div class="mission-line">GET 100K CITATIONS</div>
+              <div class="mission-line">GET NOBEL PRIZES AND TURING AWARDS</div>
+              
+              <!-- Main Mission Statement -->
+              <div class="mission-line highlight just-kidding mt-5">JUST KIDDING!</div>
+              <div class="mission-line mt-2">WE ARE A RESEARCH LAB AT THE</div>
+              <div class="mission-line highlight">
+                  <span class="underline"><a href="https://www.comp.nus.edu.sg/">SCHOOL OF COMPUTING</a></span>, 
+                  <span class="underline"><a href="https://nus.edu.sg/">NATIONAL UNIVERSITY OF SINGAPORE</a></span>
               </div>
-          {% endif %}
-      {% endfor %}
-  </div>
-</div>
-
-<!-- Mission Section -->
-<div class="container mb-5">
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="border-bottom pb-2">Mission</h2>
-      <div class="p-4 bg-light rounded">
-        <p class="lead mb-0">Feel the AGI. Use 10k GPUs like rich kids in the industry. Get 100k citations. Get Nobel prizes and Turing awards.
-          Just kidding. We work on democratizing AI in aspects including but not limited to resource-efficient AI, vision language models and more exploratory topics.</p>
+              <div class="mission-line">WORKING ON DEMOCRATIZING AI WITH FOCUS ON</div>
+              <div class="mission-line highlight">RESOURCE-EFFICIENT AI, VISION LANGUAGE MODELS</div>
+              <div class="mission-line">AND MORE EXPLORATORY TOPICS</div>
+          </div>
       </div>
-    </div>
   </div>
-</div>
 
-<!-- People Section -->
-<div id="people" class="container mb-5">
-  <h2 class="border-bottom pb-2">People</h2>
-  {% for role-table in page.role-tables %}
-    <div class="row d-flex flex-wrap"> <!-- Added flex utility classes -->
-      {% for role-column in role-table %}
-        <div class="col-md-{{ role-column.width }}">
-          {% for role in role-column.roles %}
-            {% include role-people.html role=role image=role-column.image %}
-          {% endfor %}
-        </div>
-      {% endfor %}
+    <!-- News Section -->
+    <div class="mb-5">
+        <h2 class="border-bottom pb-2">News</h2>
+        <ul class="news list-unstyled">
+            {% for post in site.posts limit: site.front_page_news %}
+                {% include news-item.html item=post %}
+            {% endfor %}
+        </ul>
+        {% assign numposts = site.posts | size %}
+        {% if numposts >= 1 %}
+            <p>
+                <span class="fa fa-fw fa-history"></span>
+                <a href="{{ site.base }}/blog.html">Older posts&hellip;</a>
+            </p>
+        {% endif %}
     </div>
-  {% endfor %}
-</div>
 
-<!-- Publications Section -->
-<div id="publications" class="container mb-5">
-  <h2 class="border-bottom pb-2">Publications</h2>
-  <p>
-      <a href="{{ site.base }}/bib/pubs.bib">Download BibTeX.</a>
-  </p>
-  <p class="footnote">
-      *: equal contribution, †: equal advising
-  </p>
-  {% include pubs.html %}
+    <!-- Research Section -->
+    <div id="research" class="mb-5">
+        <h2 class="border-bottom pb-2">Featured Research</h2>
+        <div class="row d-flex align-items-stretch">
+            {% comment %}
+            Sort the projects by date, putting those without dates last
+            {% endcomment %}
+            {% assign projects_by_date = site.projects | sort: 'last-updated', 'first' | reverse %}
+            {% for p in projects_by_date %}
+                {% if p.status != "inactive" %}
+                    <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+                        {% include project-card.html project=p %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- People Section -->
+    <div id="people" class="mb-5">
+        <h2 class="border-bottom pb-2">People</h2>
+        {% for role-table in page.role-tables %}
+            <div class="row d-flex flex-wrap">
+                {% for role-column in role-table %}
+                    <div class="col-md-{{ role-column.width }}">
+                        {% for role in role-column.roles %}
+                            {% include role-people.html role=role image=role-column.image %}
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- Publications Section -->
+    <div id="publications" class="mb-5">
+        <h2 class="border-bottom pb-2">Publications</h2>
+        <p>
+            <a href="{{ site.base }}/bib/pubs.bib">Download BibTeX.</a>
+        </p>
+        <p class="footnote">
+            *: equal contribution, †: equal advising
+        </p>
+        {% include pubs.html %}
+    </div>
 </div>

@@ -15,90 +15,66 @@
         <link rel="icon" href="/img/logo/icon.svg" type="image/x-icon">
     </head>
     <body>
-        <div class="container">
-            <!-- This is a bit nasty, but it basically says be a column first, and on larger screens be a spaced out row -->
-            <div class="header d-flex
-                        flex-column
-                        flex-md-row justify-content-md-between">
-                <a href="/" class="">
-                  <img src="/img/logo/nus.svg" height="90px"
-                       alt="JohnAILab" id="logo">
+        <!-- Navigation bar - outside container for full width -->
+        <nav class="top-navbar">
+            <div class="container d-flex justify-content-between align-items-center">
+                <a href="/" class="navbar-brand">
+                    <img src="/img/logo/nus.svg" height="60px"
+                         alt="JohnAILab" id="logo">
                 </a>
-                <ul id="topbar" class="nav nav-pills justify-content-center">
-
+                <ul class="nav nav-pills">
                     
                     
-
-                        
-
                         
                         
                         
-
+                        
                         <li class="nav-item">
                             <a class="nav-link "
                                href="/">
                                 Home
                             </a>
                         </li>
-
                     
-
-                        
-
                         
                         
                         
-
+                        
                         <li class="nav-item">
                             <a class="nav-link "
                                href="/#people">
                                 People
                             </a>
                         </li>
-
                     
-
-                        
-
                         
                         
                         
-
+                        
                         <li class="nav-item">
                             <a class="nav-link active"
                                href="/#research">
                                 Research
                             </a>
                         </li>
-
                     
-
-                        
-
                         
                         
                         
-
+                        
                         <li class="nav-item">
                             <a class="nav-link "
                                href="/#publications">
                                 Publications
                             </a>
                         </li>
-
                     
-
                 </ul>
             </div>
+        </nav>
 
-            
-
-            
-                <h1>MixEval-X</h1>
-            
-
-            <p>Perceiving and generating diverse modalities are crucial for AI models to effectively learn from and engage with real-world signals, necessitating reliable evaluations for their development. We identify two major issues in current evalua- tions: (1) inconsistent standards, shaped by different communities with varying protocols and maturity levels; and (2) significant query, grading, and generalization biases. To address these, we introduce MixEval-X, the first any-to-any, real-world benchmark designed to optimize and standardize evaluations across diverse input and output modalities. We propose multi-modal benchmark mixture and adaptation-rectification pipelines to reconstruct real-world task distributions, ensuring evaluations generalize effectively to real-world use cases. Extensive meta-evaluations show our approach effectively aligns benchmark samples with real-world task distributions. Meanwhile, MixEval-X’s model rankings correlate strongly with that of crowd-sourced real-world evaluations (up to 0.98) while being much more efficient. We provide comprehensive leaderboards to rerank existing models and organizations and offer insights to enhance understanding of multi-modal evaluations and inform future research.</p>
+        <!-- Main content -->
+        <p>Perceiving and generating diverse modalities are crucial for AI models to effectively learn from and engage with real-world signals, necessitating reliable evaluations for their development. We identify two major issues in current evalua- tions: (1) inconsistent standards, shaped by different communities with varying protocols and maturity levels; and (2) significant query, grading, and generalization biases. To address these, we introduce MixEval-X, the first any-to-any, real-world benchmark designed to optimize and standardize evaluations across diverse input and output modalities. We propose multi-modal benchmark mixture and adaptation-rectification pipelines to reconstruct real-world task distributions, ensuring evaluations generalize effectively to real-world use cases. Extensive meta-evaluations show our approach effectively aligns benchmark samples with real-world task distributions. Meanwhile, MixEval-X’s model rankings correlate strongly with that of crowd-sourced real-world evaluations (up to 0.98) while being much more efficient. We provide comprehensive leaderboards to rerank existing models and organizations and offer insights to enhance understanding of multi-modal evaluations and inform future research.</p>
 
 <p style="text-align: center"><img src="/img/mixeval-x/mixeval-x.png" alt="image" width="70%" /></p>
 
@@ -136,15 +112,26 @@
 -->
 
 
+        <!-- Footer -->
+        <div class="container">
             <div class="footer">
                 <p> Copyright 2022-2024 NUS John AI Lab </p>
                 <p class="acknowledgment">Many thanks to the <a href="https://catalyst.cs.cmu.edu" class="lab-link">Catalyst Lab</a> for inspiring our design</p>
             </div>
-
-        </div> <!-- /container -->
+        </div>
 
         <!-- Support retina images. -->
         <script type="text/javascript"
                 src="/js/srcset-polyfill.js"></script>
+        <!-- Bootstrap JS and dependencies -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+                crossorigin="anonymous"></script>
     </body>
 </html>
