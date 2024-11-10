@@ -8,98 +8,11 @@ html {
     scroll-behavior: smooth;
 }
 
-// New navbar styles
-.top-navbar {
-    background-color: #2e3338;
-    height: 60px; // Reduced from 70px
-    width: 100%;
-    padding: 5px 0; // Add some padding top and bottom
-    
-    .navbar-brand {
-        padding: 0; // Remove padding to prevent logo cutoff
-        display: flex; // Use flexbox for better alignment
-        align-items: center; // Center align the logo vertically
-        
-        img {
-            height: 50px; // Adjust logo height to fit navbar
-            width: auto; // Maintain aspect ratio
-            margin: 0; // Remove any margins
-        }
-    }
-    
-    .container {
-        height: 100%; // Make container fill navbar height
-        display: flex;
-        align-items: center; // Center everything vertically
-        justify-content: space-between;
-    }
-    
-    .nav-pills {
-        margin: 0;
-        height: 100%; // Make navigation fill height
-        display: flex;
-        align-items: center;
-        
-        .nav-link {
-            color: white;
-            padding: 6px 16px; // Slightly reduced padding
-            margin: 0 5px;
-            border-radius: 4px;
-            
-            &:hover {
-                background-color: rgba(255, 255, 255, 0.1);
-            }
-            
-            &.active {
-                background-color: rgba(255, 255, 255, 0.2);
-            }
-        }
-    }
+body {
+    padding-top: 20px;
 }
 
-// Hero section styles
-.hero-section {
-    position: relative;
-    height: 60vh;  // Reduced from 100vh to make it shorter
-    max-width: 1200px;  // Set a max-width to match container width
-    margin: 0 auto;  // Center the container
-    background: url('../img/hero-bg.jpg') no-repeat center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 2rem;
-    border-radius: 8px;  // Optional: adds rounded corners
-    overflow: hidden;  // Ensures the image stays within border-radius
-    
-    .hero-content {
-        text-align: center;
-        color: white;
-        padding: 2rem;
-        // position: absolute;  // Changed to absolute positioning
-        // top: 38%;  // Adjust this value to move text up/down
-        // left: 60%;
-        // transform: translate(-50%, -50%);
-        // width: 100%;
-        
-        h1 {
-            font-size: 4.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        
-        p {
-            font-size: 1.5rem;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-        }
-    }
-}
-
-// Add some spacing at the top of the hero section
-.hero-section {
-    margin-top: 2rem;  // Adds space between navbar and hero section
-}
-
+// Navigation styles from previous version
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;
     background-color: #800020;
@@ -109,98 +22,50 @@ a {
     color: #800020;
 }
 
-.mission-section {
-    padding: 4rem 0;
-    text-align: center;
+// Hero section styles
+.hero-section {
+    height: 50vh;       // Controls vertical span - adjust this value to crop more/less
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 2rem auto;
+    background: url('../img/hero-bg.jpg') no-repeat center 5%;  // The 40% controls which part of the image is shown
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
     
-    .mission-title {
-        font-size: 2.5rem;
-        color: #2c3e50;
+    .hero-content {
         text-align: center;
-        margin-bottom: 3rem;
-        position: relative;
-        display: inline-block;
+        color: white;
+        padding: 2rem;
         
-        &:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background-color: #800020;
+        h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-shadow: 
+                2px 2px 8px rgba(0, 0, 0, 0.7),
+                -2px -2px 8px rgba(0, 0, 0, 0.7);
         }
     }
-    
-    .mission-statement {
-        .mission-line {
-            font-size: 2rem;
-            line-height: 1.6;
-            color: #2c3e50;
-            margin: 0.3rem 0;
-            letter-spacing: 1px;
-            font-weight: 400;
-            
-            &.highlight {
-                color: #800020;
-                font-weight: 600;
-                
-                &.just-kidding {
-                    font-style: italic;
-                    font-weight: 700;
-                }
-                
-                .underline {
-                    text-decoration: underline;
-                }
-                
-                a {
-                    color: #800020;
-                    text-decoration: underline;
-                    transition: color 0.3s ease;
-                    
-                    &:hover {
-                        color: #600018; // Manually darkened version of #800020
-                        text-decoration: underline;
-                    }
-                }
-            }
-        }
-    }
-}
-
-.mt-5 {
-    margin-top: 5rem !important;
-}
-
-.mt-2 {
-    margin-top: 0rem !important;
-}
-
-/* Space out content a bit */
-body {
-    padding-top: 0;
 }
 
 .header {
-    border-bottom: none;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-    text-align: center;
+    width: 100%;
+    background-color: white;  // Ensure background covers the line
 }
 
 .footer {
-    /* padding-top: 19px; */
     color: $gray;
     border-top: 1px solid $light-gray;
     text-align: center;
     font-size: 0.8em;
 
     p {
-        margin: 5px 0;  /* Even smaller gap */
+        margin: 5px 0;
     }
 
     a:link, a:visited {
@@ -210,18 +75,38 @@ body {
 }
 
 #topbar {
-    padding-top: 10px;
+    padding: 15px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  // Space between logo and nav items
+}
+
+// Separator line
+.separator-container {
+    width: 100%;
+    padding-top: 0px;  // Match the height of topbar to prevent overlap
+}
+
+.separator {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid $light-gray;
+    margin-top: 0;      // Remove top margin
+    margin-bottom: 2rem;
+    clear: both;        // Ensure it clears any floated elements
 }
 
 .fa {
     color: $gray;
 }
+
 a > .fa {
-    // make sure that font-awesome icons are underlined in links
     display: inline;
 }
 
-/* Jumbotron */
 .jumbotron {
     text-align: justify;
     padding-top: 1.5em;
@@ -229,12 +114,12 @@ a > .fa {
     font-size: 125%
 }
 
-/* Group logo */
 #logo {
-    margin: 0; // Remove the negative margins
+    height: 70px;  // Adjust based on your logo size
+    width: auto;
+    margin: 0;     // Remove any margin that might cause overlap
 }
 
-/* Front page news. */
 ul.news {
     .date {
         color: $gray;
@@ -242,7 +127,7 @@ ul.news {
     }
 
     > li {
-        margin-top: 2em; /* Increased space between news items */
+        margin-top: 2em;
     }
 }
 
@@ -265,7 +150,7 @@ section {
 }
 
 .profile {
-    object-fit: cover; // makes sure it's cropped
+    object-fit: cover;
 }
 
 .noprofile {
