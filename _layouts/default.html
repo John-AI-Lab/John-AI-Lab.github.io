@@ -15,32 +15,38 @@
         <link rel="icon" href="{{ site.base }}/img/logo/icon.svg" type="image/x-icon">
     </head>
     <body>
-        <!-- Navigation bar - outside container for full width -->
+        <!-- Navigation bar -->
         <nav class="top-navbar">
-            <div class="container d-flex justify-content-between align-items-center">
-                <a href="{{ site.base }}/" class="navbar-brand">
-                    <img src="{{ site.base }}/img/logo/nus.svg" height="60px"
-                         alt="JohnAILab" id="logo">
-                </a>
-                <ul class="nav nav-pills">
-                    {% assign shorturl = page.url | replace:'.html','' | replace:'index','' %}
-                    {% for item in site.navigation %}
-                        {% assign itemshorturl = item.link | replace:'.html','' %}
-                        {% assign maybe-active = '' %}
-                        {% if item.title == 'Research' and page.layout == 'project' %}
-                            {% assign maybe-active = 'active' %}
-                        {% endif %}
-                        {% if itemshorturl == shorturl or is-research %}
-                            {% assign maybe-active = 'active' %}
-                        {% endif %}
-                        <li class="nav-item">
-                            <a class="nav-link {{ maybe-active }}"
-                               href="{{ site.base }}{{ item.link }}">
-                                {{ item.title }}
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
+            <div class="container">
+                <!-- Logo container -->
+                <div class="navbar-brand-container text-center">
+                    <a href="{{ site.base }}/" class="navbar-brand">
+                        <img src="{{ site.base }}/img/logo/nus.svg" height="60px"
+                             alt="JohnAILab" id="logo">
+                    </a>
+                </div>
+                <!-- Navigation container -->
+                <div class="nav-container">
+                    <ul class="nav nav-pills justify-content-center">
+                        {% assign shorturl = page.url | replace:'.html','' | replace:'index','' %}
+                        {% for item in site.navigation %}
+                            {% assign itemshorturl = item.link | replace:'.html','' %}
+                            {% assign maybe-active = '' %}
+                            {% if item.title == 'Research' and page.layout == 'project' %}
+                                {% assign maybe-active = 'active' %}
+                            {% endif %}
+                            {% if itemshorturl == shorturl or is-research %}
+                                {% assign maybe-active = 'active' %}
+                            {% endif %}
+                            <li class="nav-item">
+                                <a class="nav-link {{ maybe-active }}"
+                                   href="{{ site.base }}{{ item.link }}">
+                                    {{ item.title }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
         </nav>
 

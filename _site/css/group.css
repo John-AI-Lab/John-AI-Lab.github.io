@@ -24,39 +24,52 @@ a {
   margin: 0 auto;
 }
 
-#topbar {
-  padding-top: 10px;
-  max-width: 1200px;
-  margin: 0 auto;
+.top-navbar {
+  padding: 1rem 0;
+}
+.top-navbar .container {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
+.top-navbar .navbar-brand-container {
+  display: flex;
+  justify-content: center;
+}
+.top-navbar .nav-container {
+  display: flex;
+  justify-content: center;
+}
+.top-navbar #logo {
+  margin: 0;
+  height: 60px;
+}
 
 @media screen and (max-width: 767px) {
-  #topbar {
+  .top-navbar .container {
     flex-direction: column;
     gap: 1rem;
   }
-  .nav {
-    justify-content: center;
+  .top-navbar .navbar-brand-container {
     width: 100%;
   }
-  #logo {
-    margin: 0 auto;
-    display: block;
+  .top-navbar .nav-container {
+    width: 100%;
   }
-  .header {
-    padding-bottom: 15px;
+  .top-navbar .nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .top-navbar .nav::-webkit-scrollbar {
+    display: none;
+  }
+  .top-navbar .nav-link {
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
   }
 }
-/* Group logo */
-#logo {
-  margin-top: -15px;
-  margin-bottom: 0px;
-  height: 70px;
-}
-
 .separator {
   max-width: 1200px;
   margin: 0 auto;
