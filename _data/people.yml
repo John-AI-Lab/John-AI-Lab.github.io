@@ -42,7 +42,7 @@ keyuduan:
     display_name: "Keyu Duan"
     webpage: "https://kduan.live/"
     role: grad
-    image: False
+    image: /img/people/keyu.png
 
 esthergan:
     display_name: "Esther Gan"
@@ -90,7 +90,7 @@ leonlin:
     display_name: "Leon Lin"
     webpage: False
     role: masters
-    image: False
+    image: /img/people/leon.png
     bio: "National University of Singapore"
 
 
