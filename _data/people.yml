@@ -120,7 +120,7 @@ qlfeng:
     display_name: "Qilong Feng"
     webpage: False
     role: ugrad
-    image: False
+    image: /img/people/qilong.png
     bio: "National University of Singapore"
 
 znshen:
