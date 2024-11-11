@@ -80,41 +80,7 @@
         </nav>
 
         <!-- Main content -->
-        <p><strong>Noisy Student Training</strong> is a semi-supervised learning approach that enhances model performance by combining self-training and knowledge distillation techniques. It involves the following steps:</p>
-
-<ol>
-  <li><strong>Teacher Model Training</strong>: Train a teacher model using labeled data.</li>
-  <li><strong>Pseudo-Label Generation</strong>: Use the teacher model to generate pseudo-labels for unlabeled data.</li>
-  <li><strong>Student Model Training</strong>: Train a student model on a combined dataset of labeled and pseudo-labeled data, introducing noise during training to improve robustness.</li>
-</ol>
-
-<p>This process can be iterated by treating the student as the new teacher to relabel the unlabeled data and training a new student model.</p>
-
-<p style="text-align: center"><img src="/img/noisystudent/noisystudent.png" alt="image" width="40%" /></p>
-
-<h2 id="key-components">Key Components</h2>
-
-<ul>
-  <li><strong>Student Model Size</strong>: The student model is designed to be equal to or larger than the teacher model, enabling it to learn effectively from the expanded dataset.</li>
-  <li><strong>Noise Injection</strong>: Noise is added to the student model during training to encourage learning from pseudo-labels. This includes:
-    <ul>
-      <li><strong>Input Noise</strong>: Techniques like <a href="https://paperswithcode.com/method/randaugment">RandAugment</a> for data augmentation.</li>
-      <li><strong>Model Noise</strong>: Methods such as <a href="https://paperswithcode.com/method/dropout">dropout</a> and <a href="https://paperswithcode.com/method/stochastic-depth">stochastic depth</a> to regularize the model.</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="applications">Applications</h2>
-
-<p>Noisy Student Training has been successfully applied in various domains, including:</p>
-
-<ul>
-  <li><strong>Image Classification</strong>: Achieved state-of-the-art results on the ImageNet dataset.</li>
-  <li><strong>Automatic Speech Recognition</strong>: Improved performance in speech recognition tasks.</li>
-  <li><strong>Facial Expression Recognition</strong>: Enhanced accuracy in recognizing facial expressions from videos.</li>
-</ul>
-
-<p>For more detailed information, refer to the original paper: <a href="https://arxiv.org/abs/1911.04252">Self-training with Noisy Student improves ImageNet classification</a>.</p>
+        
 
 
 <!-- skip people for now

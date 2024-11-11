@@ -80,30 +80,7 @@
         </nav>
 
         <!-- Main content -->
-        <p>We introduce a stepwise self-evaluation mechanism to enhance the reasoning capabilities of Large Language Models (LLMs). Our approach integrates self-evaluation guidance via stochastic beam search, serving as a calibrated criterion that facilitates efficient reasoning and superior prediction quality. By balancing exploitation and exploration with temperature-controlled randomness, our method excels in producing high-quality single-chain generations and adapts well to multiple-chain scenarios with high diversity. Our approach surpasses Codex-backboned baselines in few-shot accuracy by 6.34%, 9.56%, and 5.46% on the GSM8K, AQuA, and StrategyQA benchmarks, respectively. Further analysis in multi-step reasoning indicates that our self-evaluation guidance effectively identifies logical failures, leading to higher consistency and robustness.</p>
-
-<p><strong>Paper</strong>: <a href="https://arxiv.org/abs/2305.00633">arXiv:2305.00633</a><br />
-<strong>Code</strong>: <a href="https://github.com/guideddecoding">GitHub Repository</a></p>
-
-<h2 id="generated-examples">Generated Examples</h2>
-
-<p>We compare the predictions of baseline methods and our approach on specific instances. Scores from low to high are visualized from orange, yellow, to green. Here, <em>C</em>, <em>P</em>, and <em>E</em> represent the evaluation confidence, generation confidence (probability), and their combination as the final self-evaluation score, respectively.</p>
-
-<p>In general, the evaluation confidence <em>C</em> is more effective at identifying logical errors, considering accumulated mistakes from prior steps, while the generation probability <em>P</em> focuses more on text perplexity as the confidence of the LLM generator.</p>
-
-<p style="text-align: center"><img src="/img/beamsearchreasoning/beamsearchreasoning.jpg" alt="image" width="80%" /></p>
-
-<h2 id="citation">Citation</h2>
-
-<div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@misc</span><span class="p">{</span><span class="nl">xie2023decomposition</span><span class="p">,</span>
-      <span class="na">title</span><span class="p">=</span><span class="s">{Decomposition Enhances Reasoning via Self-Evaluation Guided Decoding}</span><span class="p">,</span> 
-      <span class="na">author</span><span class="p">=</span><span class="s">{Yuxi Xie and Kenji Kawaguchi and Yiran Zhao and Xu Zhao and Min-Yen Kan and Junxian He and Qizhe Xie}</span><span class="p">,</span>
-      <span class="na">year</span><span class="p">=</span><span class="s">{2023}</span><span class="p">,</span>
-      <span class="na">eprint</span><span class="p">=</span><span class="s">{2305.00633}</span><span class="p">,</span>
-      <span class="na">archivePrefix</span><span class="p">=</span><span class="s">{arXiv}</span><span class="p">,</span>
-      <span class="na">primaryClass</span><span class="p">=</span><span class="s">{cs.CL}</span>
-<span class="p">}</span>
-</code></pre></div></div>
+        
 
 
 <!-- skip people for now
