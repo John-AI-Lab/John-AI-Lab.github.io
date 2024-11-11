@@ -62,13 +62,13 @@ xiangyanliu:
     display_name: "Xiangyan Liu"
     webpage: "https://scholar.google.com/citations?user=lsFTg-0AAAAJ&hl=en"
     role: grad
-    image: False
+    image: /img/people/xiangyan.png
 
 zijianwu:
     display_name: "Zijian Wu"
     webpage: "https://github.com/zjwu0522"
     role: grad
-    image: False
+    image: /img/people/zijian.png
 
 yiranzhao:
     display_name: "Yiran Zhao"
@@ -127,7 +127,7 @@ znshen:
     display_name: "Zhennan Shen"
     webpage: False
     role: ugrad
-    image: False
+    image: /img/people/zhennan.png
     bio: "Shanghai Jiao Tong University"
 
 yzhang:
