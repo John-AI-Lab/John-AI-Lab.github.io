@@ -159,11 +159,16 @@ a > .fa {
 
 /* Front page news. */
 ul.news {
+    margin: 0 auto; /* Centers the list horizontally */
+    max-width: 1200px; /* Restricts the maximum width for better readability */
+    padding: 20px; /* Adds spacing around the list */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    
     .date {
         color: $gray;
         font-weight: bold;
     }
-    
+
     > li {
         margin-top: 2em;
     }
