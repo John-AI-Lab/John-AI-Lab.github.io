@@ -1,4 +1,4 @@
-name: TRAIL (Tree and Rock AI Lab)
+name: Tree and Rock AI Lab
 url: https://TRAIL.github.io
 
 exclude: [bibble, README.md, Makefile, screenshot.png]

@@ -9,6 +9,13 @@ michael:
     image: /img/people/michael-v2.png
     bio: "Assistant Professor"
 
+tomas:
+    display_name: "Tomáš Mikolov"
+    webpage: "https://en.wikipedia.org/wiki/Tom%C3%A1%C5%A1_Mikolov"
+    role: faculty
+    image: /img/people/tomas.png
+    bio: "Visiting Faculty"
+
 # Postdocs/Collaborators
 
 jinjieni:
