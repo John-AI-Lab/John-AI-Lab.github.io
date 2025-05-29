@@ -10,7 +10,7 @@ michael:
     bio: "Assistant Professor"
 
 tomas:
-    display_name: "Tomáš Mikolov"
+    display_name: "Tomas Mikolov"
     webpage: "https://en.wikipedia.org/wiki/Tom%C3%A1%C5%A1_Mikolov"
     role: faculty
     image: /img/people/tomas.png
